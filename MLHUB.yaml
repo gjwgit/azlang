@@ -1,0 +1,12 @@
+--- # Azure Language Understanding
+meta:
+  name         : azlang
+  title        : Azure language understanding.
+  keywords     : azure, language
+  version      : 0.0.1
+  languages    : py
+  license      : mit
+  author       : Graham.Williams@togaware.com
+  url          : https://github.com/gjwgit/azlang
+commands:
+  demo : Demonstrate the functionalitry of LUIS language understanding.
