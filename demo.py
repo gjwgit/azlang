@@ -1,11 +1,6 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 # Author: Graham.Williams@togaware.com
-#
-# This demo is based on the Azure Cognitive Services Text Analytics Quick Starts
-# 
-# https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/quickstarts/python
-
 
 print("""============================
 Azure Language Understanding
