@@ -61,6 +61,7 @@ provide the key and the region information here.
 If you don't have a key and want to review the canned examples rather
 than work with the live examples, you can indeed continue simply by 
 pressing the Enter key.
+
 """)
     sys.stdout.write("Please enter your LUIS subscription key []: ")
     subscription_key = input()
@@ -80,7 +81,8 @@ region = "{}"
         sys.stdout.write("""
 I've saved that information into the file:
 
-""" + os.getcwd() + "/" + fname)
+{}
+""".format(os.getcwd() + "/" + fname))
 
 # Handle canned demonstration.
     
