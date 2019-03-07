@@ -19,7 +19,7 @@ Visit the github repository for more details:
 <https://github.com/gjwgit/azlang>
 
 The Python code is based on the [Language Understanding
-Quickstart](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-get-started-python-get-intent)
+Quickstart](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-get-started-python-get-intent).
 
 Usage
 -----
