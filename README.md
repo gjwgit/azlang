@@ -3,8 +3,8 @@ Azure Language Understanding
 
 This [MLHub](https://mlhub.ai) package provides a quick demonstration
 of the pre-built Language Understanding (LUIS) model provided through
-Azure's Cognitive Services. This service takes a command and parses it
-to return the intent and entities.
+Azure's Cognitive Services. This service takes a command as text and
+parses it to return the intent and entities found in the command.
 
 An Azure subscription is required and a free Azure subscription
 allowing up to 5,000 transactions per month is available from
@@ -23,6 +23,10 @@ Quickstart](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-
 
 Usage
 -----
+
+MLHub is a command line utility to quickly demonstrate the
+capabilities of pre-built machine learning models and data science
+processes. Visit [MLHub.ai](https://mlhub.ai) for details.
 
 To install and run the pre-built model:
 
