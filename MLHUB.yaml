@@ -1,9 +1,9 @@
 --- # Azure Language Understanding
 meta:
   name         : azlang
-  title        : Azure language understanding.
+  title        : Azure language cognitive service on the cloud.
   keywords     : azure, language
-  version      : 0.0.1
+  version      : 0.0.2
   languages    : py
   license      : mit
   author       : Graham.Williams@togaware.com
