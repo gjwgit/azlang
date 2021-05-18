@@ -3,7 +3,7 @@ Azure Language Understanding
 
 This [MLHub](https://mlhub.ai) package provides a quick demonstration
 of the pre-built Language Understanding (LUIS) model provided through
-Azure's Cognitive Services. This service takes a command as text or voice
+Azure's Cognitive Services. This service takes a command as text
 and parses it to return the intent and entities found in the command.
 
 An Azure subscription is required and a free Azure subscription
@@ -58,6 +58,9 @@ or do based on options you define in LUIS.
 Intent is something that users want to do: such as turn on the 
 light, turn off the oven, check the weather. 
 
+This command will listen for an intent from the computer microphone 
+and then parses it to return the intent, score and entities found in 
+the command.
 
 ```console
 $ ml intent azlang
