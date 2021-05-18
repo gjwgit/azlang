@@ -6,7 +6,17 @@ meta:
   version      : 0.0.3
   languages    : py
   license      : mit
-  author       : Graham.Williams@togaware.com
+  private      :
+    Azure LUIS : key*, endpoint, location, App ID*
+  author       : Graham.Williams@togaware.com,
   url          : https://github.com/gjwgit/azlang
+dependencies:
+  file:
+    - README.md
+    - demo.py
+    - intent.py
+    - utils.py
 commands:
   demo : Demonstrate the functionalitry of LUIS language understanding.
+  intent: Recognize an intent from speech
+
