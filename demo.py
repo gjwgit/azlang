@@ -53,7 +53,7 @@ commands = ['Turn off the lights',
 ]
 
 
-url = f'{endpoint}luis/prediction/v3.0/apps/fa5fece6-e437-4876-88b1-b6391eee4f2a/slots/production/predict'
+url = f'{endpoint}luis/prediction/v3.0/apps/{id}/production/predict'
 
 
 for command in commands:
