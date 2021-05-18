@@ -1,6 +1,7 @@
 import azure.cognitiveservices.speech as speechsdk
 from utils import request_priv_info
 import sys
+import json
 
 
 def intent(intent_conf, app_id):
@@ -40,7 +41,18 @@ def intent(intent_conf, app_id):
     intent_result = intent_recognizer.recognize_once()
 
     if intent_result.reason == speechsdk.ResultReason.RecognizedIntent:
-        print("Recognized: \"{}\" with intent id `{}`".format(intent_result.text, intent_result.intent_id))
+        js = intent_result.intent_json
+        js = json.loads(js)
+        print(js["topScoringIntent"])
+        score = js["topScoringIntent"]["score"]
+        entities = ""
+        sep = ""
+        for item in js["entities"]:
+            entities += sep + item["entity"]
+            sep = ", "
+
+        print("Recognized: \"{}\" with intent id `{}`. The score: {}, and the entities: {}".
+              format(intent_result.text, intent_result.intent_id, str(score), entities))
     elif intent_result.reason == speechsdk.ResultReason.RecognizedSpeech:
         print("Recognized: {}".format(intent_result.text))
     elif intent_result.reason == speechsdk.ResultReason.NoMatch:
@@ -56,7 +68,7 @@ if __name__ == "__main__":
     # Request subscription key and location from user.
     # ----------------------------------------------------------------------
 
-    key, location, app_id = request_priv_info()
+    key, location, app_id, location = request_priv_info()
 
     intent_config = speechsdk.SpeechConfig(subscription=key, region=location)
     intent(intent_config, app_id)

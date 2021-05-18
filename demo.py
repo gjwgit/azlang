@@ -22,7 +22,7 @@ from utils import request_priv_info
 # ----------------------------------------------------------------------
 # Request subscription key, endpoint and App ID from user.
 # ----------------------------------------------------------------------
-subscription_key, endpoint, id = request_priv_info()
+subscription_key, endpoint, id, location = request_priv_info()
 
 mlcat("", """"\
 LUIS includes a set of prebuilt intents from a number of prebuilt domains
