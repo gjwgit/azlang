@@ -36,14 +36,11 @@ def intent(intent_conf, app_id):
     # only for single shot recognition like command or query.
     # ----------------------------------------------------------------------
 
-    print("Please say one intent, such as turn off the light.")
-
     intent_result = intent_recognizer.recognize_once()
 
     if intent_result.reason == speechsdk.ResultReason.RecognizedIntent:
         js = intent_result.intent_json
         js = json.loads(js)
-        print(js["topScoringIntent"])
         score = js["topScoringIntent"]["score"]
         entities = ""
         sep = ""
