@@ -24,8 +24,6 @@ from utils import request_priv_info
 # ----------------------------------------------------------------------
 subscription_key, endpoint, id = request_priv_info()
 
-
-
 mlcat("", """"\
 LUIS includes a set of prebuilt intents from a number of prebuilt domains
 for quickly adding common intents and utterances to conversational client
@@ -53,7 +51,7 @@ commands = ['Turn off the lights',
 ]
 
 
-url = f'{endpoint}luis/prediction/v3.0/apps/{id}/production/predict'
+url = f'{endpoint}luis/prediction/v3.0/apps/{id}/slots/production/predict'
 
 
 for command in commands:
@@ -70,11 +68,10 @@ for command in commands:
     try:
         r = requests.get(url, headers=headers, params=params)
         rj = r.json()
-        responses[command] = rj
-
         qr = rj['query']
         intent = rj['prediction']['topIntent']
         entities = ""
+
         sep = ""
 
         for e in rj['prediction']['entities']:
@@ -82,11 +79,9 @@ for command in commands:
                 entities += sep + e+"-"+''.join(rj['prediction']['entities'][e][0])
                 sep = ", "
 
-        sys.stdout.write("""
-    Command: {}
-      Intent: {} score {:.2f}
-      Entities: {}
-    """.format(qr, intent, rj['prediction']['intents'][intent]['score'], entities))
+        print("Command: {}\n"
+              "Intent: {} score {:.2f}\n"
+              "Entities: {}\n".format(qr, intent, rj['prediction']['intents'][intent]['score'], entities))
 
     except Exception as e:
         sys.exit(e)

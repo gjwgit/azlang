@@ -18,4 +18,6 @@ def request_priv_info():
     endpoint = private_dic["Azure LUIS"]["endpoint"]
 
     id = private_dic["Azure LUIS"]["app_id"]
-    return subscription_key, endpoint, id
+
+    location = private_dic["Azure LUIS"]["location"]
+    return subscription_key, endpoint, id, location
