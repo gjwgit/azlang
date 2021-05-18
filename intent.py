@@ -48,7 +48,7 @@ def intent(intent_conf, app_id):
             entities += sep + item["entity"]
             sep = ", "
 
-        print("Recognized: \"{}\" with intent id `{}`. The score: {}, and the entities: {}".
+        print("Recognized: \"{}\" with intent id `{}`. The score: {}, and entities: {}".
               format(intent_result.text, intent_result.intent_id, str(score), entities))
     elif intent_result.reason == speechsdk.ResultReason.RecognizedSpeech:
         print("Recognized: {}".format(intent_result.text))

@@ -24,7 +24,7 @@ from utils import request_priv_info
 # ----------------------------------------------------------------------
 subscription_key, endpoint, id, location = request_priv_info()
 
-mlcat("", """"\
+mlcat("", """\
 LUIS includes a set of prebuilt intents from a number of prebuilt domains
 for quickly adding common intents and utterances to conversational client
 apps. These include Camera, Music, HomeAutomation, and many more. We will
