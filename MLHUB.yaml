@@ -10,5 +10,13 @@ meta:
     Azure LUIS : key*, endpoint, App ID*, location
   author       : Graham.Williams@togaware.com,
   url          : https://github.com/gjwgit/azlang
+dependencies:
+  file:
+    - README.md
+    - demo.py
+    - intent.py
+    - utils.py
 commands:
   demo : Demonstrate the functionalitry of LUIS language understanding.
+  intent: Recognize an intent from speech
+

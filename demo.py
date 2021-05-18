@@ -84,6 +84,8 @@ for command in commands:
               "Entities: {}\n".format(qr, intent, rj['prediction']['intents'][intent]['score'], entities))
 
     except Exception as e:
-        sys.exit(e)
+        sys.exit("Your private information is wrong."
+                 "Please run ml configure azlang to update your private information.")
+
 
     sleep(0.2) # Limit of 5 queries per second so sleep between each
