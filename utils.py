@@ -11,13 +11,8 @@ def request_priv_info():
 
     path = os.path.join(os.getcwd(), PRIVATE_FILE)
 
-    private_dic = get_private(path, "azlang")
+    values = get_private(path, "azlang", "Azure LUIS")
 
-    subscription_key = private_dic["Azure LUIS"]["key"]
+    subscription_key, endpoint, location, id = values
 
-    endpoint = private_dic["Azure LUIS"]["endpoint"]
-
-    id = private_dic["Azure LUIS"]["app_id"]
-
-    location = private_dic["Azure LUIS"]["location"]
-    return subscription_key, endpoint, id, location
+    return subscription_key, endpoint, location, id
