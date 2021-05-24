@@ -65,7 +65,7 @@ if __name__ == "__main__":
     # Request subscription key and location from user.
     # ----------------------------------------------------------------------
 
-    key, location, app_id, location = request_priv_info()
+    key, location, location, app_id = request_priv_info()
 
     intent_config = speechsdk.SpeechConfig(subscription=key, region=location)
     intent(intent_config, app_id)
