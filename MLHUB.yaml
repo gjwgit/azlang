@@ -6,7 +6,8 @@ meta:
   version      : 0.0.3
   languages    : py
   license      : mit
-  private      : key*, endpoint, location, App ID*
+  private      :
+    Azure LUIS : key*, endpoint, location, App ID*
   author       : Graham.Williams@togaware.com,
   url          : https://github.com/gjwgit/azlang
 dependencies:
