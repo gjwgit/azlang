@@ -1,5 +1,5 @@
 import azure.cognitiveservices.speech as speechsdk
-from utils import request_priv_info
+from mlhub.pkg import get_private
 import sys
 import json
 
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     # Request subscription key and location from user.
     # ----------------------------------------------------------------------
 
-    key, location, app_id, location = request_priv_info()
+    key, location, location, app_id = get_private()
 
     intent_config = speechsdk.SpeechConfig(subscription=key, region=location)
     intent(intent_config, app_id)
