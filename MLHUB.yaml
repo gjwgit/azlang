@@ -3,7 +3,7 @@ meta:
   name         : azlang
   title        : Azure language cognitive service on the cloud.
   keywords     : azure, language
-  version      : 0.0.3
+  version      : 0.0.4
   languages    : py
   license      : mit
   private      :
