@@ -17,12 +17,12 @@ mlask(end="\n")
 import sys
 import requests
 from time import sleep
-from utils import request_priv_info
+from mlhub.pkg import get_private
 
 # ----------------------------------------------------------------------
 # Request subscription key, endpoint and App ID from user.
 # ----------------------------------------------------------------------
-subscription_key, endpoint, location, id = request_priv_info()
+subscription_key, endpoint, location, id = get_private()
 
 mlcat("", """\
 LUIS includes a set of prebuilt intents from a number of prebuilt domains
